@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package io.weather.webapp.user;
+
+/**
+ * @author christian
+ *
+ */
+@Service
+public interface UserService {
+
+	public void createUser(User user);
+}

@@ -1,0 +1,39 @@
+/**
+ * 
+ */
+package io.weather.webapp.api.location.owm;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import io.weather.webapp.user.User;
+
+/**
+ * @author christian
+ *
+ */
+@Service
+public class LocationImpService implements LocationService {
+
+	private LocationRepository locationRepository;
+
+	/**
+	 * @param locationRepository
+	 */
+	public LocationImpService(LocationRepository locationRepository) {
+		super();
+		this.locationRepository = locationRepository;
+	}
+
+	@Override
+	public void saveLocation(Location location) {
+		this.locationRepository.save(location);
+	}
+
+	@Override
+	public List<Location> getAllUser() {
+		return this.locationRepository.findAll();
+	}
+
+}

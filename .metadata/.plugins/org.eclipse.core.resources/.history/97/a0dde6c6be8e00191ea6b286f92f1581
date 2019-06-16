@@ -1,0 +1,53 @@
+/**
+ * 
+ */
+package io.weather.webapp.service;
+
+import java.util.List;
+
+import org.apache.catalina.mapper.Mapper;
+import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
+
+import io.weather.webapp.domain.Location;
+import io.weather.webapp.dto.LocationDTO;
+import io.weather.webapp.facade.LocationFacade;
+import io.weather.webapp.repository.LocationRepository;
+
+/**
+ * @author christian
+ *
+ */
+@Service
+public class LocationService implements LocationFacade {
+
+	private LocationRepository locationRepository;
+
+	private Mapper mapper = new Mapper();
+
+	/**
+	 * @param locationRepository
+	 */
+	public LocationService(LocationRepository locationRepository) {
+		super();
+		this.locationRepository = locationRepository;
+	}
+
+	@Override
+	public void saveLocation(LocationDTO locationDTO) {
+		Location locationDomain = new Location();
+		BeanUtils.copyProperties(locationDTO, locationDomain);
+		this.locationRepository.save(locationDomain);
+	}
+
+	@Override
+	public List<LocationDTO> getAllLocation() {
+		return this.locationRepository.findAll();
+	}
+
+	@Override
+	public Iterable<LocationDTO> saveBatchLocation(List<LocationDTO> locationDTO) {
+		return this.locationRepository.saveAll(locationDTO);
+	}
+
+}

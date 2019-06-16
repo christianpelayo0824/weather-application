@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Personal Weather Application</title>
+<link rel="stylesheet"
+	th:href="@{/resources/static/resource/bootstrap-4.0.0-dist/css/bootstrap.min.css/webapp/src/main/resources/static/resource/bootstrap-4.0.0-dist/css/bootstrap.min.css}" />
+</head>
+<body>
+	<header>
+		<h1>login page...</h1>
+	</header>
+</body>
+</html>

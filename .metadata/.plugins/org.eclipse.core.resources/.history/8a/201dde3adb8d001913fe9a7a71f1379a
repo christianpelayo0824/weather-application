@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package io.weather.webapp.api.util.owm;
+
+/**
+ * @author christian
+ *
+ */
+public class OpenWeatherMapReader {
+
+	private 
+}

@@ -1,0 +1,17 @@
+/**
+ * 
+ */
+package io.weather.webapp.administrator;
+
+/**
+ * @author christian
+ *
+ */
+public class Administrator {
+
+	private long aid;
+	private String firstname;
+	private String lastname;
+	private String email;
+	private long phoneNumber;
+}

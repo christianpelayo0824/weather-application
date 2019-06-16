@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package io.weather.webapp.service;
+
+import java.util.List;
+
+import io.weather.webapp.entity.Location;
+
+/**
+ * @author christian
+ *
+ */
+public interface LocationService {
+
+	public void saveLocation(Location location);
+
+	public List<Location> getAllLocation();
+
+	public Iterable<Location> saveBatchLocation(List<Location> location);
+}

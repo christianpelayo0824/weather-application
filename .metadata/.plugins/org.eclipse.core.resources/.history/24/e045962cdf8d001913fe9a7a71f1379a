@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package io.weather.webapp.api.location.owm;
+
+import javax.persistence.Embeddable;
+
+/**
+ * @author christian
+ *
+ */
+
+@Embeddable
+public class Coordinates {
+
+	private long lon;
+	private long lat;
+}

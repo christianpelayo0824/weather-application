@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package io.weather.webapp.api.location.owm;
+
+/**
+ * @author christian
+ *
+ */
+public class LocationImpService implements LocationService {
+
+	@Override
+	public void saveLocation(Location location) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package io.weather.webapp.api.util.owm;
+
+import org.jboss.logging.Logger;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+/**
+ * @author christian
+ *
+ */
+public class OpenWeatherMapReader {
+
+	private final Logger LOGGER = Logger.getLogger(OpenWeatherMapReader.class.getName());
+	
+	private final String LOCATION = "1717512";
+	private final String BASE_URL = ""
+	objectMapper = new ObjectMapper();
+}

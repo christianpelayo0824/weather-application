@@ -1,0 +1,45 @@
+package io.weather.webapp;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+import io.weather.webapp.api.location.owm.Coordinate;
+import io.weather.webapp.api.location.owm.Location;
+import io.weather.webapp.api.location.owm.LocationService;
+
+@SpringBootApplication(scanBasePackages = { "io.weather.webapp" })
+@EnableJpaRepositories(basePackages = { "io.weather.webapp" })
+@EntityScan(basePackages = { "io.weather.webapp" })
+public class WebappApplication implements CommandLineRunner {
+
+	private LocationService locationService;
+
+	/**
+	 * @param locationService
+	 */
+	public WebappApplication(LocationService locationService) {
+		super();
+		this.locationService = locationService;
+	}
+
+	public static void main(String[] args) {
+		SpringApplication.run(WebappApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+
+		Location location = new Location();
+		location.setId(707860);
+		location.setName("Hurzuf");
+		location.setCountry("UA");
+		Coordinate coordinate = new Coordinate();
+		coordinate.setLon(34.283333);
+		
+//		this.locationService.saveLocation();
+	}
+
+}

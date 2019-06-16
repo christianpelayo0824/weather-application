@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package io.weather.webapp.user;
+
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author christian
+ *
+ */
+@RestController
+
+public class UserController {
+
+}

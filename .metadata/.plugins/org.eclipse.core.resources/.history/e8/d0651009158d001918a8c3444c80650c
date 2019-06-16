@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package io.weather.webapp.api.owm;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author christian
+ *
+ */
+@RestController
+@RequestMapping(value = "/api/owm")
+public class OpenWeatherMapController {
+
+	public String testApi() {
+		return "test API...";
+	}
+}

@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html>
+<head th:insert="/fragments/header.html :: headerfiles">
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package io.weather.webapp.api.location.owm;
+
+import javax.persistence.Entity;
+
+/**
+ * @author christian
+ *
+ */
+
+@Entity
+public class Location {
+
+	private long lid;
+	private long id;
+	private String name;
+	private String country;
+	
+	@Embedded
+	private Coordinate coordinate;
+}

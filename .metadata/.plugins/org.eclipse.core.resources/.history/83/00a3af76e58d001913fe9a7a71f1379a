@@ -1,0 +1,49 @@
+package io.weather.webapp;
+
+import java.io.InputStream;
+import java.util.List;
+
+import org.jboss.logging.Logger;
+import org.jboss.logging.Logger.Level;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import io.weather.webapp.api.location.owm.Location;
+import io.weather.webapp.api.location.owm.LocationMapper;
+import io.weather.webapp.api.location.owm.LocationService;
+
+@SpringBootApplication(scanBasePackages = { "io.weather.webapp" })
+@EnableJpaRepositories(basePackages = { "io.weather.webapp" })
+@EntityScan(basePackages = { "io.weather.webapp" })
+public class WebappApplication implements CommandLineRunner {
+
+	private final Logger LOGGER = Logger.getLogger(LocationMapper.class.getName());
+
+	private LocationService locationService;
+
+	public static void main(String[] args) {
+		SpringApplication.run(WebappApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		ObjectMapper objectMapper = new ObjectMapper();
+		TypeReference<List<Location>> typeReference = new TypeReference<List<Location>>() {
+		};
+		InputStream inputStream = TypeReference.class.getResourceAsStream("~/resource/map/city.list.json");
+		try {
+			List<Location> listLocation = objectMapper.readValue(inputStream, typeReference);
+			this.locationService.saveBatchLocation(listLocation);
+			LOGGER.log(Level.INFO, "Location saved!");
+		} catch (Exception e) {
+			LOGGER.log(Level.ERROR, e);
+		}
+	}
+
+}

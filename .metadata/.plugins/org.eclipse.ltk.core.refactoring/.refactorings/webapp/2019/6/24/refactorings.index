@@ -1,0 +1,52 @@
+1560265351998	Delete element
+1560265368662	Move 'login.html' to 'partial'
+1560265374163	Move 'login.html' to 'views'
+1560265490749	Rename resource 'partial'
+1560267334520	Delete elements
+1560267392224	Rename resource 'global-header.html'
+1560267857496	Move 'resource' to 'static'
+1560269281369	Rename package 'io.weather.webapp.User'
+1560270994974	Rename resource 'application.properties'
+1560341390654	Rename package 'io.weather.webapp.portal'
+1560341421634	Rename package 'io.weather.webapp.signin'
+1560341928332	Rename package 'io.weather.webapp.weatherapi'
+1560341939056	Rename package 'io.weather.webapp.api.weather'
+1560342137661	Delete element
+1560342859330	Rename package 'io.weather.webapp.user'
+1560342873596	Rename package 'io.weather.webapp.profile'
+1560344466382	Rename resource 'administratro'
+1560344658694	Move 'index.html' to 'templates'
+1560344697121	Delete elements
+1560345562103	Delete elements
+1560432291550	Delete element
+1560432695895	Rename type 'Coordinates'
+1560518006965	Delete elements
+1560518073920	Delete elements
+1560518360507	Delete element
+1560518387105	Rename package 'io.weather.webapp.controller'
+1560518572281	Delete element
+1560518607915	Delete element
+1560520052129	Rename type 'Coordinate'
+1560520061531	Rename type 'Location'
+1560520070498	Rename type 'User'
+1560525351928	Rename package 'io.weather.webapp.entity'
+1560525362865	Rename type 'CoordinateEntity'
+1560525369422	Rename type 'LocationEntity'
+1560525376339	Rename type 'UserEntity'
+1560525398170	Rename package 'io.weather.webapp.service'
+1560525425080	Rename type 'LocationService'
+1560525433938	Rename type 'LocationImpService'
+1560525497819	Rename package 'io.weather.webapp.fascade'
+1560525505492	Rename type 'LocationFascade'
+1560525802628	Rename type 'UserService'
+1560526778021	Rename type 'Coordinates'
+1560526785835	Rename type 'Location'
+1560528410825	Rename type 'CoordinateDomain'
+1560528422030	Rename type 'LocationDomain'
+1560528428097	Rename type 'UserDomain'
+1560557109547	Rename package 'io.weather.webapp.domain'
+1560558552656	Rename type 'CoordinatesDTO'
+1560575789034	Delete element
+1560575791888	Delete element
+1560579779678	Delete element
+1560579783370	Delete element

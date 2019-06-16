@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package io.weather.webapp.assembler;
+
+/**
+ * @author christian
+ *
+ */
+public class LocationAssembler {
+
+}

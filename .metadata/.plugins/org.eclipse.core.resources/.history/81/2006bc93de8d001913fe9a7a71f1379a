@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package io.weather.webapp.api.util.owm;
+
+import org.jboss.logging.Logger;
+
+/**
+ * @author christian
+ *
+ */
+public class OpenWeatherMapReader {
+
+	private final Logger LOGGER = Logger.getLogger(OpenWeatherMapReader.class.getName());
+
+	private final String API_KEY = "efb8f2498a61438a536c9cdb86367be5";
+	private final String LOCATION = "1717512";
+	private final String BASE_URL = "https://samples.openweathermap.org/data/2.5/weather?id=" + LOCATION + "&appid="
+			+ API_KEY;
+
+}

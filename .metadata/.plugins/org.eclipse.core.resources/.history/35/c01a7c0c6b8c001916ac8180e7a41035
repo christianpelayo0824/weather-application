@@ -1,0 +1,31 @@
+/**
+ * 
+ */
+package io.weather.webapp.user;
+
+import org.springframework.stereotype.Service;
+
+/**
+ * @author christian
+ *
+ */
+@Service
+
+public class UserImpService implements UserService {
+
+	private UserRepository userRepository;
+
+	/**
+	 * @param userRepository
+	 */
+	public UserImpService(UserRepository userRepository) {
+		super();
+		this.userRepository = userRepository;
+	}
+
+	@Override
+	public void createUser(User user) {
+		this.userRepository.save(user);
+	}
+
+}

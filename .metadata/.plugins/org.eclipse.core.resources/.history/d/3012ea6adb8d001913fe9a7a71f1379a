@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package io.weather.webapp.api.util.owm;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+/**
+ * @author christian
+ *
+ */
+public class OpenWeatherMapReader {
+
+	ObjectMapper objectMapper = new ObjectMapper();
+}

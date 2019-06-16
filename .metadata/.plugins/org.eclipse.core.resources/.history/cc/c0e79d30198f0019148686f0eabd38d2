@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package io.weather.webapp.mapperconfig;
+
+/**
+ * @author christian
+ *
+ */
+public class ModelMapperConfig {
+
+}

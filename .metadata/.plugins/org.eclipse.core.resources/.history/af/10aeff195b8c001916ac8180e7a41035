@@ -1,0 +1,5 @@
+package io.weather.webapp.User;
+
+public class User {
+
+}

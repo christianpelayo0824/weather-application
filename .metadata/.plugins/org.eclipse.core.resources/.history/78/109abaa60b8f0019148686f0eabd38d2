@@ -1,0 +1,28 @@
+/**
+ * 
+ */
+package io.weather.webapp.assembler;
+
+import org.modelmapper.ModelMapper;
+
+import io.weather.webapp.dto.LocationDTO;
+import io.weather.webapp.entity.Location;
+
+/**
+ * @author christian
+ *
+ */
+public class LocationAssembler {
+
+	public Location toEntity(LocationDTO locationDTO) {
+		ModelMapper modelMapper = new ModelMapper();
+		LocationDTO targetLocation = new LocationDTO();
+		targetLocation.setId(locationDTO.getId());
+		targetLocation.setName(locationDTO.getName());
+		targetLocation.setCountry(locationDTO.getCountry());
+		targetLocation.setCoordDTO(locationDTO.getCoordDTO());
+		ModelMapper modelMapper2 = modelMapper;
+		Location location = modelMapper2.map(targetLocation, Location.class);
+		return location;
+	}
+}

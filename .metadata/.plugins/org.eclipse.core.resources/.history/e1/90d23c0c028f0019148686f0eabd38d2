@@ -1,0 +1,60 @@
+/**
+ * 
+ */
+package io.weather.webapp.dto;
+
+import io.weather.webapp.entity.Coordinate;
+
+/**
+ * @author christian
+ *
+ */
+public class LocationDTO {
+
+	private long lid;
+	private long id;
+	private String name;
+	private String country;
+
+	public long getLid() {
+		return lid;
+	}
+
+	public void setLid(long lid) {
+		this.lid = lid;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public Coordinate getCoord() {
+		return coord;
+	}
+
+	public void setCoord(Coordinate coord) {
+		this.coord = coord;
+	}
+
+	private Coordinate coord;
+}

@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package io.weather.webapp.service;
+
+import io.weather.webapp.entity.UserEntity;
+
+/**
+ * @author christian
+ *
+ */
+public interface UserService {
+
+	public void createUser(UserEntity user);
+}

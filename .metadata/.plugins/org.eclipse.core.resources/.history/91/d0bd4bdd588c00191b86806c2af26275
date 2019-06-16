@@ -1,0 +1,5 @@
+package io.weather.webapp.portal;
+
+public class PortalController {
+
+}

@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package io.weather.webapp.user;
+
+import org.springframework.stereotype.Service;
+
+/**
+ * @author christian
+ *
+ */
+@Service
+public interface UserService {
+
+	public void createUser(User user);
+}

@@ -1,0 +1,37 @@
+/**
+ * 
+ */
+package io.weather.webapp.assembler;
+
+import org.modelmapper.ModelMapper;
+
+import io.weather.webapp.dto.LocationDTO;
+import io.weather.webapp.entity.Location;
+
+/**
+ * @author christian
+ *
+ */
+public class LocationAssembler {
+
+	private LocationAssembler() {
+		throw new IllegalStateException("LocationAssemler Exception");
+	}
+
+	/**
+	 * This method is use to convert </br>
+	 * Location DTO to and Entity Object.
+	 * 
+	 * @param locationDTO
+	 * @return
+	 */
+	public static Location toEntity(LocationDTO locationDTO) {
+		ModelMapper modelMapper = new ModelMapper();
+		Location location = modelMapper.map(locationDTO, Location.class);
+		location.setId(locationDTO.getId());
+		location.setName(locationDTO.getName());
+		location.setCountry(locationDTO.getCountry());
+		location.setCoord(CoordinateAssembler.toEntity(locationDTO.getCoordDTO()));
+		return location;
+	}
+}

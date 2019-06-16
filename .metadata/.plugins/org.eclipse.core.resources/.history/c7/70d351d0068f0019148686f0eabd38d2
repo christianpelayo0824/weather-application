@@ -1,0 +1,67 @@
+/**
+ * 
+ */
+package io.weather.webapp.service;
+
+import java.util.List;
+
+import org.apache.catalina.mapper.Mapper;
+import org.jboss.logging.Logger;
+import org.jboss.logging.Logger.Level;
+import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
+
+import io.weather.webapp.dto.LocationDTO;
+import io.weather.webapp.entity.Location;
+import io.weather.webapp.facade.LocationFacade;
+import io.weather.webapp.repository.LocationRepository;
+
+/**
+ * @author christian
+ *
+ */
+@Service
+public class LocationService implements LocationFacade {
+
+	private final Logger LOGGER = Logger.getLogger(LocationService.class.getName());
+
+	private LocationRepository locationRepository;
+
+	private Mapper mapper = new Mapper();
+
+	/**
+	 * @param locationRepository
+	 */
+	public LocationService(LocationRepository locationRepository) {
+		super();
+		this.locationRepository = locationRepository;
+	}
+
+	@Override
+	public void saveLocation(LocationDTO locationDTO) {
+		LocationDTO targetLocation = new LocationDTO();
+		Location location = new Location();
+		BeanUtils.copyProperties(targetLocation, location);
+		LOGGER.log(Level.INFO, locationDTO.getCoordDTO());
+		LOGGER.log(Level.INFO, location.getCoord());
+		LOGGER.log(Level.INFO, "Before saving to database...");
+	}
+
+	@Override
+	public List<Location> getAllLocation() {
+		return this.locationRepository.findAll();
+	}
+
+	@Override
+	public Iterable<Location> saveBatchLocation(List<Location> location) {
+		return this.locationRepository.saveAll(location);
+	}
+
+	@Override
+	public LocationDTO getLocationById(long id) {
+		LocationDTO locationDTO = new LocationDTO();
+		BeanUtils.copyProperties(this.locationRepository.findById(id), locationDTO);
+		return locationDTO;
+	}
+
+}

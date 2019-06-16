@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package io.weather.webapp.administrator;
+
+/**
+ * @author christian
+ *
+ */
+public class AdministratorController {
+
+}

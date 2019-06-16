@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package io.weather.webapp.assembler;
+
+import org.modelmapper.ModelMapper;
+
+import io.weather.webapp.dto.CoordinateDTO;
+import io.weather.webapp.entity.Coordinate;
+
+/**
+ * @author christian
+ *
+ */
+public class CoordinateAssembler {
+
+	public static Coordinate toEntity(CoordinateDTO coordinateDTO) {
+		ModelMapper modelMapper = new ModelMapper();
+		Coordinate coordinate = modelMapper.map(coordinateDTO, Coordinate.class);
+		coordinate.setLon(coordinateDTO.getLon());
+		coordinate.setLat(coordinateDTO.getLat());
+		return coordinate;
+	}
+}

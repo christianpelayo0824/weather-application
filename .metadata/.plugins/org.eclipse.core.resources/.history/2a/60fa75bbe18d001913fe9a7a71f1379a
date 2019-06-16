@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package io.weather.webapp.api.location.owm;
+
+import org.springframework.stereotype.Service;
+
+/**
+ * @author christian
+ *
+ */
+@Service
+public interface LocationService {
+
+	public void saveLocation(Location location);
+}

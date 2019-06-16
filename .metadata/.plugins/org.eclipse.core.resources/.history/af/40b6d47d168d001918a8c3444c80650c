@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package io.weather.webapp.administrator;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+/**
+ * Controller for the administrator </br>
+ * where all the endpoints can be access
+ * 
+ * @author christian
+ *
+ */
+@Controller
+@RequestMapping(value = "/administrator")
+public class AdministratorController {
+
+	/**
+	 * 
+	 * @return return the index view for </br>
+	 *         administrator
+	 */
+	@GetMapping(value = "/index")
+	public String index() {
+		return "/administrator/index";
+	}
+}

@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package io.weather.webapp.home;
+
+/**
+ * @author christian
+ *
+ */
+public class HomeController {
+
+}

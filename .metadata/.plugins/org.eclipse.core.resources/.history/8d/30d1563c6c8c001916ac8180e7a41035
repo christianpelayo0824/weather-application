@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package io.weather.webapp.user;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+/**
+ * 
+ * This is the interface of the User Entity serve </br>
+ * as the main connection to the database
+ * 
+ * @author christian
+ *
+ */
+public interface UserRepository extends JpaRepository<User, Long> {
+
+}

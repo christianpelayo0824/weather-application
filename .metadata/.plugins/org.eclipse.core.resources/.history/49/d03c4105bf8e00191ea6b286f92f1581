@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package io.weather.webapp.facade;
+
+import java.util.List;
+
+import io.weather.webapp.domain.Location;
+import io.weather.webapp.dto.LocationDTO;
+
+/**
+ * @author christian
+ *
+ */
+public interface LocationFacade {
+
+	void saveLocation(Location location);
+
+	List<Location> getAllLocation();
+
+	Iterable<Location> saveBatchLocation(List<LocationDTO> location);
+}

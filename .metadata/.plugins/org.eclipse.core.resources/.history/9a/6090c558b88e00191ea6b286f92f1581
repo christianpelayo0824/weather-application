@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package io.weather.webapp.facade;
+
+import io.weather.webapp.domain.UserDomain;
+
+/**
+ * @author christian
+ *
+ */
+public interface UserService {
+
+	void createUser(UserDomain user);
+}

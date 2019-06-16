@@ -1,0 +1,36 @@
+package io.weather.webapp;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+import io.weather.webapp.api.location.owm.LocationService;
+
+@SpringBootApplication(scanBasePackages = { "io.weather.webapp" })
+@EnableJpaRepositories(basePackages = { "io.weather.webapp" })
+@EntityScan(basePackages = { "io.weather.webapp" })
+public class WebappApplication implements CommandLineRunner {
+
+	private LocationService locationService;
+
+	/**
+	 * @param locationService
+	 */
+	public WebappApplication(LocationService locationService) {
+		super();
+		this.locationService = locationService;
+	}
+
+	public static void main(String[] args) {
+		SpringApplication.run(WebappApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package io.weather.webapp.security;
+
+/**
+ * @author christian
+ *
+ */
+public class SecurityConfiguration {
+
+}

@@ -1,0 +1,37 @@
+/**
+ * 
+ */
+package io.weather.webapp.assembler;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import io.weather.webapp.dto.CoordinateDTO;
+import io.weather.webapp.entity.Coordinate;
+
+/**
+ * @author christian
+ *
+ */
+public class CoordinateAssembler {
+
+	@Autowired
+	private ModelMapper modelMapper;
+
+	/**
+	 * This method is use to convert </br>
+	 * Coordinate DTO to an Entity Object.
+	 * 
+	 * @param coordinateDTO
+	 * @return the Coordinate entity
+	 */
+	public Coordinate toEntity(CoordinateDTO coordinateDTO) {
+		Coordinate coordinate = modelMapper.map(coordinateDTO, Coordinate.class);
+		return coordinate;
+	}
+
+	public CoordinateDTO toDTO(Coordinate coordinate) {
+		CoordinateDTO coordinateDTO = modelMapper.map(coordinate, CoordinateDTO.class);
+		return coordinateDTO;
+	}
+}

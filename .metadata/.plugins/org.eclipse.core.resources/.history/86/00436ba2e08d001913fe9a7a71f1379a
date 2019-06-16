@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package io.weather.webapp.api.location.owm;
+
+/**
+ * @author christian
+ *
+ */
+public class LocationImpService implements LocationService {
+
+}

@@ -1,0 +1,46 @@
+/**
+ * 
+ */
+package io.weather.webapp.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import io.weather.webapp.domain.LocationDomain;
+import io.weather.webapp.fascade.LocationFascade;
+import io.weather.webapp.repository.LocationRepository;
+
+/**
+ * @author christian
+ *
+ */
+@Service
+public class LocationService implements LocationFascade {
+
+	private LocationRepository locationRepository;
+
+	/**
+	 * @param locationRepository
+	 */
+	public LocationService(LocationRepository locationRepository) {
+		super();
+		this.locationRepository = locationRepository;
+	}
+
+	@Override
+	public void saveLocation(LocationDomain location) {
+		this.locationRepository.save(location);
+	}
+
+	@Override
+	public List<LocationDomain> getAllLocation() {
+		return this.locationRepository.findAll();
+	}
+
+	@Override
+	public Iterable<LocationDomain> saveBatchLocation(List<LocationDomain> location) {
+		return this.locationRepository.saveAll(location);
+	}
+
+}

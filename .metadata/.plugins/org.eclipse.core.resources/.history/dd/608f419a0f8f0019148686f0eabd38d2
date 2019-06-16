@@ -1,0 +1,35 @@
+/**
+ * 
+ */
+package io.weather.webapp.assembler;
+
+import org.modelmapper.ModelMapper;
+
+import io.weather.webapp.dto.CoordinateDTO;
+import io.weather.webapp.entity.Coordinate;
+
+/**
+ * @author christian
+ *
+ */
+public class CoordinateAssembler {
+
+	private CoordinateAssembler() {
+		throw new IllegalStateException("CoordinateAssembler Exception");
+	}
+
+	/**
+	 * This method is to use to convert </br>
+	 * Coordinate DTO to an entity.
+	 * 
+	 * @param coordinateDTO
+	 * @return the Coordinate entity
+	 */
+	public static Coordinate toEntity(CoordinateDTO coordinateDTO) {
+		ModelMapper modelMapper = new ModelMapper();
+		Coordinate coordinate = modelMapper.map(coordinateDTO, Coordinate.class);
+		coordinate.setLon(coordinateDTO.getLon());
+		coordinate.setLat(coordinateDTO.getLat());
+		return coordinate;
+	}
+}

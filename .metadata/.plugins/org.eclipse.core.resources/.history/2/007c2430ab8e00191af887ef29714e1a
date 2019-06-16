@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package io.weather.webapp.dto;
+
+/**
+ * @author christian
+ *
+ */
+public class Location {
+
+}

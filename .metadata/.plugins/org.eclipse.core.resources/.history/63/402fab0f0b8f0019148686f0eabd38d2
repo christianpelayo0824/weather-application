@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package io.weather.webapp.assembler;
+
+import io.weather.webapp.dto.LocationDTO;
+import io.weather.webapp.entity.Location;
+
+/**
+ * @author christian
+ *
+ */
+public class LocationAssembler {
+
+	public Location toEntity(LocationDTO locationDTO) {
+		Location location = new Location();
+		LocationDTO targetLocation = new LocationDTO();
+
+		targetLocation.setId(locationDTO.getId());
+		targetLocation.setName(locationDTO.getName());
+		targetLocation.setCountry(locationDTO.getCountry());
+		targetLocation.setCoordDTO(locationDTO.getCoordDTO());
+
+		return location;
+
+	}
+}

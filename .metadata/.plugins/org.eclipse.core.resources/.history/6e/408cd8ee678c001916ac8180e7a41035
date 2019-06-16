@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package io.weather.webapp.user;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+/**
+ * @author christian
+ *
+ */
+public interface UserRepository extends JpaRepository<User, long>{
+
+}

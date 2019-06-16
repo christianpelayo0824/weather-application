@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package io.weather.webapp.api.location.owm;
+
+import java.io.InputStream;
+import java.util.List;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+/**
+ * @author christian
+ *
+ */
+public class LocationMapper {
+
+	public void locationMapper(String fileLocation) {
+		ObjectMapper objectMapper = new ObjectMapper();
+		TypeReference<List<Location>> typeReference = new TypeReference<List<Location>>() {};
+		Class<TypeReference> class1 = TypeReference.class;
+		InputStream inputStream = class1.getResourceAsStream(fileLocation);
+	}
+}

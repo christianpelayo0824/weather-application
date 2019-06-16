@@ -1,0 +1,21 @@
+/**
+ * 
+ */
+package io.weather.webapp.fascade;
+
+import java.util.List;
+
+import io.weather.webapp.domain.LocationDomain;
+
+/**
+ * @author christian
+ *
+ */
+public interface LocationFascade {
+
+	void saveLocation(LocationDomain location);
+
+	List<LocationDomain> getAllLocation();
+
+	Iterable<LocationDomain> saveBatchLocation(List<LocationDomain> location);
+}

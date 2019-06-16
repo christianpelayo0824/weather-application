@@ -1,0 +1,24 @@
+package io.weather.webapp;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.Bean;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+@SpringBootApplication(scanBasePackages = { "io.weather.webapp" })
+@EnableJpaRepositories(basePackages = { "io.weather.webapp" })
+@EntityScan(basePackages = { "io.weather.webapp" })
+public class WebappApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(WebappApplication.class, args);
+	}
+
+	@Bean
+	CommandLineRunner run() {
+		return new String("Test");
+	}
+
+}

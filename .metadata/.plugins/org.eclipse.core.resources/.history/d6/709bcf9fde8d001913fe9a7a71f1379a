@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package io.weather.webapp.api.util.owm;
+
+import org.jboss.logging.Logger;
+
+/**
+ * @author christian
+ *
+ */
+public class OpenWeatherMapReader {
+
+}

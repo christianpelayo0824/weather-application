@@ -1,0 +1,24 @@
+package io.weather.webapp.signin;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+/**
+ * This Controller is the resource for the login and logout of the application.
+ * 
+ * @author christian
+ *
+ */
+
+@Controller
+public class PortalController {
+
+	/**
+	 * 
+	 * @return this mapping will return login page
+	 */
+	@GetMapping(value = "/login")
+	public String login() {
+		return "views/login";
+	}
+}

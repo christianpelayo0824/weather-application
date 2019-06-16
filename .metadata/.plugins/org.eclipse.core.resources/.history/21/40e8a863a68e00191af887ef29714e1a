@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package io.weather.webapp.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+/**
+ * @author christian
+ *
+ */
+public interface LocationRepository extends JpaRepository<Location, Long> {
+
+}
